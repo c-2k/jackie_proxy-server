@@ -1,0 +1,16 @@
+{
+  "name": "Jackie-Proxy-Server",
+  "version": "1.0.0",
+  "description": "proxy server",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": " <Jackie Chen> (https://github.com/thisisjackie)",
+  "license": "MIT",
+  "dependencies": {
+    "morgan": "^1.9.0",
+    "express": "^4.16.2"
+  }
+}
