@@ -11,3 +11,20 @@ app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });
 
+app.get('/listing/:listingId', (req, res) => {
+  console.log('listingId', req.params.listingId);
+  const id = req.params.listingId;
+  Photos.find({ listingId: id })
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+const html = path.join(__dirname, '/public/index.html');
+
+app.get('/:listingId', (req, res) => {
+  res.sendFile(html);
+});
